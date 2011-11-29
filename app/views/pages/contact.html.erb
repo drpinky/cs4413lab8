@@ -1,14 +1,41 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title><%= @title %></title>
-		<%= csrf_meta_tag %>
-	</head>
-	<body>
-		<%= yield %>
-		<h1>Pages#contact</h1>
-		<p>Find me in app/views/pages/contact.html.erb</p>
-	</body>
+<body>
+	<div id="minMax">
+		<div id="header"> <!-- header begin -->
+			<div class="content"> <!-- Content which is the inside text, formatted so it looks better -->
+				<h1>Contact Us</h1>
+			</div> <!-- End of content -->
+		</div> <!-- end header -->
+		<div id="navigation"> <!-- navigation begin -->
+			<div class="content"> <!-- Content which is the inside text, formatted so it looks better -->
+				<a href="default.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="prevDeal.html">Previous Deals</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="faq.html">Frequently Asked Questions</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ContactUs.html">Contact Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="login.html">Login</a>	
+			</div> <!-- End of content -->
+		</div> <!-- end navigation -->
 
-</html>
+	
+		<div id="wrapper">
+			<div id="topbar"><!-- Photo of the Bargain and description-->
+				<div class="content">
+				<h3>Contact Us</h3>
+				<p>We appreciate our customers! If you have any questions about today's deal, a previous deal, your order, or just a question in general, please fill out this form! We will respond as soon as possible.</p>
+				<form id="contactus" method="post" action="contactusSubmit.html">
+				<label id="firstName" for="firstName">First Name:&nbsp;<input type="text" id="firstName" maxlength="30"></input></label><br/>
+				<label id="lastName" for="lastName">Last Name:&nbsp;<input type="text" id="lastName" maxlength="30"></input></label><br/>
+				<label id="order" for="order">Order Number (optional):&nbsp;<input type="text" id="order" maxlength="7"></input></label><br/>
+				<label id="email" for="email">E-mail:&nbsp;<input type="text" id="email" maxlength="30"></input></label><br/>
+				<label id="comments" for="comments"><textarea rows="10" cols="60" id="comments"></textarea></label><br/>
+				<br/>
+				</form>
+			</div>
 
+			
+
+		</div><!-- end of website-->
+
+		<div id="footer">
+			<div class="content">
+				<p>Copyright &copy;2011 Chelsea Hicks / Bargain of the Day </p>
+				<p>Please note that we do not control the descriptions the seller posts, we only briefly check it to avoid abuse. If the product is for medical use, please verify with a doctor before purchasing.</p>
+			</div> <!-- end of content -->
+		</div> <!-- end footer -->
+
+	</div> <!-- end wrapper -->
