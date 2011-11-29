@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>About</title>
+		<title><%= @title %></title>
+		<%= csrf_meta_tag %>
 	</head>
 	<body>
+		<%= yield %>
 		<h1>Pages#about</h1>
 		<p>Find me in app/views/pages/about.html.erb</p>
 	</body>

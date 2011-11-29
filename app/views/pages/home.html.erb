@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Home</title>
+		<title><%= @title %></title>
+		<%= csrf_meta_tag %>
 	</head>
 	<body>
-		<h1>Pages#home</h1>
-		<p>Find me in app/views/pages/home.html.erb</p>
+		<%= yield %>
+		Welcome to the home page!
 	</body>
 
 </html>
