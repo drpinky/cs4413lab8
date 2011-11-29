@@ -1,13 +1,52 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 		<title><%= @title %></title>
 		<%= csrf_meta_tag %>
+		<%= stylesheet_link_tag 'app/assets/stylesheets/rest.css', :media => 'rest' %>
 	</head>
 	<body>
 		<%= yield %>
-		<h1>Pages#about</h1>
-		<p>Find me in app/views/pages/about.html.erb</p>
+		<div id="minMax">
+		<div id="header"> <!-- header begin -->
+			<div class="content"> <!-- Content which is the inside text, formatted so it looks better -->
+				<h1>Frequently Asked Questions</h1>
+			</div> <!-- End of content -->
+		</div> <!-- end header -->
+		<div id="navigation"> <!-- navigation begin -->
+			<div class="content"> <!-- Content which is the inside text, formatted so it looks better -->
+				<a href="default.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="prevDeal.html">Previous Deals</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="faq.html">Frequently Asked Questions</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ContactUs.html">Contact Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="login.html">Login</a>	
+			</div> <!-- End of content -->
+		</div> <!-- end navigation -->
+
+	
+		<div id="wrapper">
+			<div id="topbar"><!-- Photo of the Bargain and description-->
+				<div class="content">
+				1. Is this a scam?<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No it isn't! Sellers contact us, requesting to post on here. All sales are backed by the sellers.<br/>
+				2. Why is it only one day?<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;So people buy more of it.<br/>
+				3.Is Web Technoloies your favorite class?<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yes!<br/>
+				</div>
+			</div>
+
+			
+
+		</div><!-- end of website-->
+
+		<div id="footer">
+			<div class="content">
+				<p>Copyright &copy;2011 Chelsea Hicks / Bargain of the Day </p>
+				<p>Please note that we do not control the descriptions the seller posts, we only briefly check it to avoid abuse. If the product is for medical use, please verify with a doctor before purchasing.</p>
+			</div> <!-- end of content -->
+		</div> <!-- end footer -->
+
+	</div> <!-- end wrapper -->
+
 	</body>
 
 </html>
