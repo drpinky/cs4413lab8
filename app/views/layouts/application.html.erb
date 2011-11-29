@@ -1,14 +1,23 @@
 <!DOCTYPE  html>
 <html>
 	<head>
-		
-		<%= stylesheet_link_tag 'stylesheets/mystyle.css' %> 
+
+		<%= stylesheet_link_tag 'mystyle.css' if @title == "Home"%> 
+		<%= stylesheet_link_tag 'mystyle2.css' if @title != "Home"%> 
 		<title><%= @title %></title>
 		
 		<%= csrf_meta_tag %>
 	</head>
 	<body>
+		<div id="minMax">
+		<div id="header"> <!-- header begin -->
+			<div class="content"> <!-- Content which is the inside text, formatted so it looks better -->
+				<h1><%= @title %></h1>
+			</div> <!-- End of content -->
+		</div> <!-- end header -->
+		<%= render 'layouts/navigation' %>
 		<%= yield %>
+		<%= render 'layouts/footer' %>
 	
 	</body>	
 </html>
