@@ -1,6 +1,6 @@
 Lab8::Application.routes.draw do
   
-  match '/' :to=> 'page#home'
+  match '/', :to=> 'page#home'
   match '/contact', :to=> 'pages#contact'
   match '/about', :to=> 'pages#about'
   
