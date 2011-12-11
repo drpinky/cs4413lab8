@@ -2,9 +2,10 @@
 <html>
 	<head>
 
+		
+		<title><%=@title%></title>
 		<%= stylesheet_link_tag 'mystyle.css' if @title == "Home"%> 
 		<%= stylesheet_link_tag 'mystyle2.css' if @title != "Home"%> 
-		<title><%=@title%></title>
 		
 		<%= csrf_meta_tag %>
 	</head>
