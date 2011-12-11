@@ -1,5 +1,7 @@
 Lab8::Application.routes.draw do
   
+  get "products/new"
+
   match '/contact', :to=> 'pages#contact'
   match '/about', :to=> 'pages#about'
   root :to => 'pages#home'
