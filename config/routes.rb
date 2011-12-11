@@ -1,5 +1,5 @@
 Lab8::Application.routes.draw do
-  get "pages/home"
+  match '/home', :to=> 'pages#contact'
 
   get "pages/contact"
 
