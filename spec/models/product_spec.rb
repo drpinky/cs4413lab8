@@ -15,11 +15,42 @@ describe Product do
     no_name_product.should_not be_valid
   end
   
-  it "should have a price"
+  it "should have a price" do
+    no_price_product = Product.new(@attr.merge(:price=> ""))
+    no_price_product.should_not be_valid
+  end
   
-  it "should have hours"
+  it "should have hours" do
+    no_hours_product = Product.new(@attr.merge(:hours=> ""))
+    no_hours_product.should_not be_valid
+  end
   
-  it "should have minutes"
+  it "should have minutes" do
+    no_minutes_product = Product.new(@attr.merge(:minutes=> ""))
+    no_minutes_product.should_not be_valid
+  end
   
-  it "should have a description"
+  it "should have a description" do
+    no_description_product = Product.new(@attr.merge(:description=> ""))
+    no_description_product.should_not be_valid
+  end
+  
+  it "should reject names that are too long" do
+    long_name = "a" * 51
+    long_name_product = Product.new(@attr.merge(:name => long_name))
+    long_name_product.should_not be_valid
+  end
+  
+  it "should reject duplicate names" do
+    Product.create!(@attr)
+    product_with_duplicate_name = Product.new(@attr)
+    product_with_duplicate_name.should_not be_valid
+  end
+  
+  it "should reject names identical up to case" do
+    upcased_name = @attr[:name].upcase
+    Product.create!(@attr.merge(:name => upcased_name))
+    product_with_duplicate_name = Product.new(@attr)
+    product_with_duplicate_name.should_not be_valid
+  end
 end
