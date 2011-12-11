@@ -1,9 +1,8 @@
 Lab8::Application.routes.draw do
-  match '/home', :to=> 'pages#contact'
-
-  get "pages/contact"
-
-  get "pages/about"
+  
+  match '/home', :to=> 'pages#home'
+  match '/contact', :to=> 'pages#contact'
+  match '/about', :to=> 'pages#about'
   
  # get "/assets/main.css"
 #
