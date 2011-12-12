@@ -1,7 +1,6 @@
 Lab8::Application.routes.draw do
   resources :products
-  get "products/new"
-
+  
   match '/view/:id/show', :to => 'products#show'
   match '/contact', :to=> 'pages#contact'
   match '/about', :to=> 'pages#about'
