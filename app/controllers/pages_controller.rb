@@ -8,6 +8,7 @@ class PagesController < ApplicationController
   end
 
   def about
+    @product = Product.find(params[1])
     @title = "About"
   end
 
