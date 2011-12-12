@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe Product do
-  
   before(:each) do
     @attr = { :name => "Example Product", :price => "0.00", :amount => "2", :hours => "24", :minutes => "00", :description => "Example Description"}
   end

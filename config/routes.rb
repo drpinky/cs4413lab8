@@ -1,10 +1,20 @@
 Lab8::Application.routes.draw do
   resources :products
   
-  match '/view/:id/show', :to => 'products#show'
+ # match 'buy', :to => 'products#buy'
+  #match '/view/:id/buybutton', :to => 'products#buybutton'
+  match '/:id/confirm', :to => 'products#confirm'
+  match '/:id/buy', :to => 'products#buy'
+  match '/:id/show', :to => 'products#show'
+  match '/:id/buybutton', :to => 'products#buybutton'
   match '/contact', :to=> 'pages#contact'
   match '/about', :to=> 'pages#about'
+  match '/sent', :to=> 'pages#sent'
   match '/', :to=> 'pages#home'
+  
+
+  
+
   
  # get "/assets/main.css"
 #

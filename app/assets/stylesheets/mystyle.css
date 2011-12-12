@@ -4,7 +4,7 @@ body {font-size:76%; font-family:"trebuchet MS", verdana, arial, sans-serif; bac
 
 #minMax {min-width:700px;  margin:0 auto; background:#e0e0e0;}
 
-#header {background:#a31e39;}
+#header {background:#a31e39; text-align: center;}
 #navigation {background:#c0c0c0; text-align:center;}
 
 #outer1 {float:left; width:20%; background:#d0c0c0;}

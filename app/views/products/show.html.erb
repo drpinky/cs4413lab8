@@ -18,7 +18,7 @@
 					<br/>
 					<br/>
 					<br/>
-					Today's special price is: $<%= @dollar %>.<%= @cent %> plus shipping and handling.<br/> <br/>
+					Today's special price is: <%= @money %> plus shipping and handling.<br/> <br/>
 					<form method="post" action="purchase.html">
 
 					</form>
@@ -30,6 +30,10 @@
 					<h3>How many do we have left?</h3>
 					<p>We currently have <%=  @product.amount %> left.. Buy now before we run out!</p>
 					<p></p>
+					
+					<h3>Buy now! </h3>
+					<%= button_to 'Buy Now!', 'buy', :method => :get %>
+					
 				</div> <!-- end content -->
 			</div> <!-- end outer3 -->
 

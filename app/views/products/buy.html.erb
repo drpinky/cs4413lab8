@@ -1,0 +1,11 @@
+<h1>Buy Now!</h1>
+
+<%= form_tag('buybutton') do %>
+<div class="wrapper">
+	<%= label_tag(:f, "Amount") %><br/>
+	<%= text_field_tag(:f) %><br/>
+	<br/>
+	<%= submit_tag("Buy") %>
+	<br/> 
+</div>
+<% end %>
