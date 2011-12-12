@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Product do
   
   before(:each) do
-    @attr = { :name => "Example Product", :price => "0.00", :hours => "24", :minutes => "00", :description => "Example Description"}
+    @attr = { :name => "Example Product", :price => "0.00", :amount => "2", :hours => "24", :minutes => "00", :description => "Example Description"}
   end
   
   it "should create a new instance given valid attributes" do
@@ -18,6 +18,11 @@ describe Product do
   it "should have a price" do
     no_price_product = Product.new(@attr.merge(:price=> ""))
     no_price_product.should_not be_valid
+  end
+  
+  it "should have an amount" do
+    no_amount_product = Product.new(@attr.merge(:amount=> ""))
+    no_amount_product.should_not be_valid
   end
   
   it "should have hours" do

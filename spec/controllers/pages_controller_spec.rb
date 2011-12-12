@@ -3,14 +3,14 @@ require 'spec_helper'
 describe PagesController do
   render_views
 
-  describe "GET 'home'" do
+  describe "GET '/'" do
     it "returns http success" do
-      get 'home'
+      get '/''
       response.should be_success
     end
     
     it "should have the right title" do
-      get 'home'
+      get '/'
       response.should have_selector("title", :content => "Home")
     end
   end

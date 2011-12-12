@@ -15,7 +15,8 @@ ActiveRecord::Schema.define(:version => 20111211213239) do
 
   create_table "products", :force => true do |t|
     t.string   "name"
-    t.float    "price"
+    t.integer  "amount"
+    t.integer  "price"
     t.integer  "hours"
     t.integer  "minutes"
     t.string   "description"
